@@ -561,15 +561,6 @@ def main():
             )
         
         st.dataframe(display_df, use_container_width=True, height=500)
-        
-        # Download button
-        csv = display_df.to_csv(index=False).encode('utf-8-sig')
-        st.download_button(
-            label=get_text(lang, 'download_btn'),
-            data=csv,
-            file_name='china_investment_filtered.csv',
-            mime='text/csv',
-        )
     
     with tab5:
         st.markdown(f"### {get_text(lang, 'insights_title')}")
